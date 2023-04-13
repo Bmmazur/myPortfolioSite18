@@ -1,5 +1,6 @@
 header {
     background-color: #F9FDFF;
+    display: flex;
 }
 .inline-block {
     display: inline-block;
@@ -14,20 +15,15 @@ header {
        width: 73%;
        padding: 1%;
     }
-    ul.nav {
+    nav ul{
         width: 50%;
         margin-left: auto;
     }
     /*body content style*/
-    section {
+    .heroImg {
         background-color: #F9FDFF;
-        height: 600px;
+        height: 500px;
         padding: 25px;
-    }
-    .flex-container {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
     }
     .content {
         display: flex;
@@ -36,33 +32,98 @@ header {
         justify-content: center;
         flex-flow: row wrap;
     }
+    .content p {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+    }
+    .content .flex-container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 0%;
+    }
+    .myWork {
+        background-color: #F9FDFF;
+        height: 500px;
+        padding: 10%;
+    }
     .workDisplayContainer {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 10%;
+        justify-content: center;
+        justify-content: space-evenly;
+        padding: 5%;
+        width: 100%;
     }
     /*footer style*/
     footer {
         background-color: #F9FDFF;
         padding: 10%;
     }
-    ul.footer {
+    footer ul {
         display: inline-block;
-        vertical-align: top;
-        padding: 10;
+        vertical-align: bottom;
+        margin-left: auto;
     }
-    @media only screen and (max-width: 600){
-        .flex-container {
+    /*mobile media query*/
+    @media only screen and (max-width: 600px){
+        header {
+            background-color: #F9FDFF;
             display: flex;
-            justify-content: space-evenly;
-            width: 100%;
+        }
+        .inline-block {
+            display: inline-block;
+            vertical-align: top;
+            }
+            .logo {
+            width: 23%;
+            padding: 1%;
+            text-align: center;
+            }
+            nav {
+               width: 73%;
+               padding: 1%;
+            }
+            nav ul{
+                width: 50%;
+                margin-left: auto;
+            }
+
+        .heroImg {
+            background-color: #F9FDFF;
+            height: 500px;
+            padding: 25px;
         }
         .content {
             display: flex;
-            width: 500px;
+            width: 100%;
             margin: 0 auto;
             justify-content: center;
             flex-flow: column wrap;
+        }
+        .content p {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+        }
+        .content .flex-container {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding: 0%;
+        }
+
+        .myWork {
+            background-color: #F9FDFF;
+            height: 500px;
+            padding: 40%;
+        }
+        .workDisplayContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 5%;
+            width: 100%;
         }
     }
